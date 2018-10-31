@@ -5,6 +5,7 @@
   "main": "public/electron.js",
   "homepage": "./",
   "dependencies": {
+    "electron-default-menu": "^1.0.1",
     "electron-is-dev": "^1.0.1",
     "jsonwebtoken": "^8.3.0",
     "react": "^16.5.2",
