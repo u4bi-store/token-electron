@@ -10,4 +10,6 @@ $ npm install
 $ npm run build
 
 $ npm start
+
+$ npm run create-token
 ```
