@@ -1,4 +1,5 @@
-const {app, BrowserWindow} = require('electron')
+const {app, Menu, shell, BrowserWindow} = require('electron')
+const defaultMenu = require('electron-default-menu')
 
 var mainWindow
 
@@ -17,7 +18,10 @@ function createWindow () {
 
 }
 
-app.on('ready', _ => createWindow())
+app.on('ready', _ => {
+  createWindow()
+  Menu.setApplicationMenu(Menu.buildFromTemplate(defaultMenu(app, shell)))
+})
 
 app.on('window-all-closed', _ => process.platform !== 'darwin' && app.quit())
 
